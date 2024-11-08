@@ -11,11 +11,19 @@ pipeline {
     }
     
     stages {
+        stage('read the version'){
+            steps{
+                def packageJson = readJSON file: 'pacage.json'
+                def appVersion = packageJson.version 
+            }
+
+        }
         stage('install Dependencies') {
             steps {
                sh """
                 npm install
                 ls -ltr
+                echo $appVersion
                """
             }
         }
