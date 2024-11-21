@@ -12,6 +12,7 @@ pipeline {
     // }
     environment{
         def appVersion = '' //variable declaration
+        nexusUrl = 'nexus.lerndevops.online:8081'
 
     }
 
@@ -86,7 +87,7 @@ pipeline {
             }
         } */
 
-        /* stage('Nexus Artifact Upload'){
+        stage('Nexus Artifact Upload'){
             steps{
                 script{
                     nexusArtifactUploader(
@@ -106,7 +107,7 @@ pipeline {
                     )
                 }
             }
-        } */
+        } 
         /* stage('Deploy'){
             when{
                 expression{
