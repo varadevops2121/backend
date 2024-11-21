@@ -12,9 +12,7 @@ pipeline {
     // }
     environment{
         def appVersion = '' //variable declaration
-    //     nexusUrl = 'nexus.lerndevops.online:8081'
-    //     region = "us-east-1"
-    //     account_id = "315069654700"
+
     }
 
     stages {
